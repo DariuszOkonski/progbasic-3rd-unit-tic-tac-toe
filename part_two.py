@@ -1,5 +1,26 @@
+import part_one
+
+
+# ==============================================================
 def has_won(board, player):
     """Returns True if player has won the game."""
+
+    is_first_row_win = board[0][0] == player and board[0][1] == player and board[0][2] == player
+    is_second_row_win = board[1][0] == player1 and board[1][1] == player1 and board[1][2] == player1
+    is_third_row_win = board[2][0] == player1 and board[2][1] == player1 and board[2][2] == player1
+    
+    is_first_column_win = board[0][0] == player and board[1][0] == player and board[2][0] == player
+    is_second_column_win = board[0][1] == player and board[1][1] == player and board[2][1] == player
+    is_third_column_win = board[0][2] == player and board[1][2] == player and board[2][2] == player
+
+    is_a_c_diagonal_win = board[0][0] == player and board[1][1] == player and board[2][2] == player
+    is_c_a_diagonal_win = board[0][2] == player and board[1][1] == player and board[2][0] == player
+
+    if (is_first_row_win or is_second_row_win or is_third_row_win or 
+        is_first_column_win or is_second_column_win or is_third_column_win or
+        is_a_c_diagonal_win or is_c_a_diagonal_win):
+            return True
+
     return False
 
 def is_full(board):
@@ -9,3 +30,20 @@ def is_full(board):
 def print_board(board):
     """Prints a 3-by-3 board on the screen with borders."""
     pass
+
+# workspace ==================================================
+board = part_one.init_board()
+
+
+player1 = 'x'
+# board[0][0] = 'o'
+board[0][2] = 'x'
+board[1][1] = 'o'
+board[2][0] = 'x'
+
+print(board)
+
+iswin = has_won(board, player1)
+print(iswin)
+
+
