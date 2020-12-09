@@ -1,7 +1,5 @@
 import part_one
 
-
-# ==============================================================
 def has_won(board, player):
     """Returns True if player has won the game."""
 
@@ -35,35 +33,44 @@ def is_full(board):
 
 def print_board(board):
     """Prints a 3-by-3 board on the screen with borders."""
+    temp_board = f"""
+        1   2   3
+      A {board[0][0]} | {board[0][1]} | {board[0][2]} 
+       ---+---+---
+      B {board[1][0]} | {board[1][1]} | {board[1][2]} 
+       ---+---+---
+      C {board[2][0]} | {board[2][1]} | {board[2][2]}
+    """
+    
+    
+    print(temp_board)
     pass
 
 # workspace ==================================================
-board = part_one.init_board()
+
+# board = part_one.init_board()
 
 
-player1 = 'x'
-board[0][0] = 'x'
-board[0][1] = 'o'
-board[0][2] = 'x'
+# player1 = 'x'
+# board[0][0] = '.'
+# board[0][1] = 'o'
+# board[0][2] = '.'
 
-board[1][0] = 'o'
-board[1][1] = 'x'
-board[1][2] = 'x'
+# board[1][0] = 'o'
+# board[1][1] = 'x'
+# board[1][2] = 'x'
 
-board[2][0] = 'o'
-board[2][1] = 'x'
-board[2][2] = 'x'
+# board[2][0] = 'o'
+# board[2][1] = 'x'
+# board[2][2] = 'x'
 
-
-
+# print_board(board)
 
 
 # print(board)
 
-is_board_full = is_full(board)
-print(is_board_full)
+# is_board_full = is_full(board)
+# print(is_board_full)
 
 # iswin = has_won(board, player1)
 # print(iswin)
-
-
