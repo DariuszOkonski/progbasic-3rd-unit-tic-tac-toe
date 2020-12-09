@@ -68,3 +68,4 @@ board[2][0] = "o"
 
 row, col = get_move(board, 'player1')
 print(row, col)
+print("check github")
