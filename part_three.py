@@ -1,6 +1,18 @@
+import part_one
+import part_two
+
+
 def print_result(winner):
     """Congratulates winner or proclaims tie (if winner equals zero)."""
-    pass
+    print(winner)
+
+    if winner.lower() == 'x':
+        print("X has won!")
+    elif winner.lower() == 'o':
+        print("O has won!")
+    else:
+        print("It's a tie!")
+
 
 # def tictactoe_game(mode='HUMAN-HUMAN'):
 #     board = init_board()
@@ -12,3 +24,23 @@ def print_result(winner):
 #
 #     winner = 0
 #     print_result(winner)
+
+# ================================================================
+
+board = part_one.init_board()
+
+player1 = 'osdf'
+board[0][0] = '.'
+board[0][1] = 'o'
+board[0][2] = '.'
+
+board[1][0] = 'o'
+board[1][1] = 'x'
+board[1][2] = 'x'
+
+board[2][0] = 'o'
+board[2][1] = 'x'
+board[2][2] = 'x'
+
+part_two.print_board(board)
+print_result(player1)
