@@ -5,8 +5,8 @@ def has_won(board, player):
     """Returns True if player has won the game."""
 
     is_first_row_win = board[0][0] == player and board[0][1] == player and board[0][2] == player
-    is_second_row_win = board[1][0] == player1 and board[1][1] == player1 and board[1][2] == player1
-    is_third_row_win = board[2][0] == player1 and board[2][1] == player1 and board[2][2] == player1
+    is_second_row_win = board[1][0] == player and board[1][1] == player and board[1][2] == player
+    is_third_row_win = board[2][0] == player and board[2][1] == player and board[2][2] == player
     
     is_first_column_win = board[0][0] == player and board[1][0] == player and board[2][0] == player
     is_second_column_win = board[0][1] == player and board[1][1] == player and board[2][1] == player
