@@ -40,16 +40,12 @@ def print_board(board):
       B {board[1][0]} | {board[1][1]} | {board[1][2]} 
        ---+---+---
       C {board[2][0]} | {board[2][1]} | {board[2][2]}
-    """
-    
-    
+    """    
     print(temp_board)
-    pass
 
 # workspace ==================================================
 
 # board = part_one.init_board()
-
 
 # player1 = 'x'
 # board[0][0] = '.'
