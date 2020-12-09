@@ -1,9 +1,10 @@
 def get_proper_coordinates(row_dictionary, column_dictionary, board):
     isCoordinatesCorrect = False
+    max_coordinates_length = 2
     while not isCoordinatesCorrect:
         coordinates = input("Please enter coordinates: ").upper()
 
-        if (len(coordinates) != 2):
+        if (len(coordinates) != max_coordinates_length):
             print("Something is wrong, Please repeat your coordinates")
             continue
 
@@ -35,8 +36,8 @@ def check_if_position_in_board_is_empty(row, col, board):
 # ==========================================================================
 def init_board():
     """Returns an empty 3-by-3 board (with .)."""
-    row = 3;
-    column = 3;
+    row = 3
+    column = 3
     board = []
 
     for item in range(row):
@@ -56,17 +57,4 @@ def get_move(board, player):
 
 def mark(board, player, row, col):
     """Marks the element at row & col on the board for player."""
-    board[row][col] = player1
-
-# =========================================================================
-
-# board = init_board()
-
-# board[0][0] = 'x'
-# board[1][1] = 'x'
-# board[2][0] = "o"
-
-# player1 = 'x'
-# row, col = get_move(board, player1)
-
-# mark(board, player1, row, col)
+    board[row][col] = player

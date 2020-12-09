@@ -1,4 +1,5 @@
 import part_one
+from part_one import init_board
 
 def has_won(board, player):
     """Returns True if player has won the game."""
@@ -42,31 +43,3 @@ def print_board(board):
       C {board[2][0]} | {board[2][1]} | {board[2][2]}
     """    
     print(temp_board)
-
-# workspace ==================================================
-
-# board = part_one.init_board()
-
-# player1 = 'x'
-# board[0][0] = '.'
-# board[0][1] = 'o'
-# board[0][2] = '.'
-
-# board[1][0] = 'o'
-# board[1][1] = 'x'
-# board[1][2] = 'x'
-
-# board[2][0] = 'o'
-# board[2][1] = 'x'
-# board[2][2] = 'x'
-
-# print_board(board)
-
-
-# print(board)
-
-# is_board_full = is_full(board)
-# print(is_board_full)
-
-# iswin = has_won(board, player1)
-# print(iswin)
