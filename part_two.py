@@ -25,7 +25,13 @@ def has_won(board, player):
 
 def is_full(board):
     """Returns True if board is full."""
-    return False
+    
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            if(board[i][j] == '.'):
+                return False
+    
+    return True
 
 def print_board(board):
     """Prints a 3-by-3 board on the screen with borders."""
@@ -36,14 +42,28 @@ board = part_one.init_board()
 
 
 player1 = 'x'
-# board[0][0] = 'o'
+board[0][0] = 'x'
+board[0][1] = 'o'
 board[0][2] = 'x'
-board[1][1] = 'o'
-board[2][0] = 'x'
 
-print(board)
+board[1][0] = 'o'
+board[1][1] = 'x'
+board[1][2] = 'x'
 
-iswin = has_won(board, player1)
-print(iswin)
+board[2][0] = 'o'
+board[2][1] = 'x'
+board[2][2] = 'x'
+
+
+
+
+
+# print(board)
+
+is_board_full = is_full(board)
+print(is_board_full)
+
+# iswin = has_won(board, player1)
+# print(iswin)
 
 
