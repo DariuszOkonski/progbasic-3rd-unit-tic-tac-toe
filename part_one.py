@@ -56,16 +56,17 @@ def get_move(board, player):
 
 def mark(board, player, row, col):
     """Marks the element at row & col on the board for player."""
-    pass
+    board[row][col] = player1
 
+# =========================================================================
 
-#
-board = init_board()
+# board = init_board()
 
-board[0][0] = 'x'
-board[1][1] = 'x'
-board[2][0] = "o"
+# board[0][0] = 'x'
+# board[1][1] = 'x'
+# board[2][0] = "o"
 
-row, col = get_move(board, 'player1')
-print(row, col)
-print("check github")
+# player1 = 'x'
+# row, col = get_move(board, player1)
+
+# mark(board, player1, row, col)
