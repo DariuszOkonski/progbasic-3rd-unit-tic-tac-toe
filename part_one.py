@@ -1,14 +1,14 @@
 def get_proper_coordinates(row_dictionary, column_dictionary, board):
     isCoordinatesCorrect = False
     max_coordinates_length = 2
-    quit_game = False
+    end_game = False
 
     while not isCoordinatesCorrect:
         coordinates = input("Please enter coordinates: ").upper()
 
         if coordinates.lower() == 'quit':
-            quit_game = True
-            return (0, 0, quit_game)
+            end_game = True
+            return (0, 0, end_game)
 
         if (len(coordinates) != max_coordinates_length):
             print("Something is wrong, Please repeat your coordinates")
@@ -30,7 +30,7 @@ def get_proper_coordinates(row_dictionary, column_dictionary, board):
             input_col = column_dictionary[input_col]
             isCoordinatesCorrect = check_if_position_in_board_is_empty(input_row, input_col, board)
 
-    return (input_row, input_col, quit_game)
+    return (input_row, input_col, end_game)
 
 def check_if_position_in_board_is_empty(row, col, board):
     if(board[row][col] == '.'):

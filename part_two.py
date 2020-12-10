@@ -1,6 +1,3 @@
-import part_one
-from part_one import init_board
-
 def has_won(board, player):
     """Returns True if player has won the game."""
 
