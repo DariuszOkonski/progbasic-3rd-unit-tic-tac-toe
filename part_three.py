@@ -51,9 +51,7 @@ def tictactoe_game(mode='HUMAN-HUMAN'):
 
         isPlayerChanged = not isPlayerChanged
 
-# tictactoe_game()
-
-
+tictactoe_game()
 
 
 
@@ -105,4 +103,4 @@ def tictactoe_game(mode='HUMAN-HUMAN'):
     else:
         print("other options")
 
-tictactoe_game()
+# tictactoe_game()
