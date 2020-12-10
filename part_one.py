@@ -1,8 +1,14 @@
 def get_proper_coordinates(row_dictionary, column_dictionary, board):
     isCoordinatesCorrect = False
     max_coordinates_length = 2
+    quit_game = False
+
     while not isCoordinatesCorrect:
         coordinates = input("Please enter coordinates: ").upper()
+
+        if coordinates.lower() == 'quit':
+            quit_game = True
+            return (0, 0, quit_game)
 
         if (len(coordinates) != max_coordinates_length):
             print("Something is wrong, Please repeat your coordinates")
@@ -24,7 +30,7 @@ def get_proper_coordinates(row_dictionary, column_dictionary, board):
             input_col = column_dictionary[input_col]
             isCoordinatesCorrect = check_if_position_in_board_is_empty(input_row, input_col, board)
 
-    return (input_row, input_col)
+    return (input_row, input_col, quit_game)
 
 def check_if_position_in_board_is_empty(row, col, board):
     if(board[row][col] == '.'):
@@ -51,9 +57,9 @@ def get_move(board, player):
     row_dictionary = {'A': 0, 'B': 1, 'C': 2}
     column_dictionary = {'1': 0, '2': 1, '3': 2}
 
-    row, col = get_proper_coordinates(row_dictionary, column_dictionary, board)
+    row, col, quit_game = get_proper_coordinates(row_dictionary, column_dictionary, board)
 
-    return row, col
+    return row, col, quit_game
 
 def mark(board, player, row, col):
     """Marks the element at row & col on the board for player."""

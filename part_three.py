@@ -76,7 +76,11 @@ def tictactoe_game(mode='HUMAN-HUMAN'):
         print("")
         print(f"Current Player: {player.upper()}")
         print_board(board)
-        row, col = get_move(board, player)
+        row, col, end_game = get_move(board, player)
+
+        if end_game:
+            break
+
         mark(board, player, row, col)
 
         if(has_won(board, player)):
